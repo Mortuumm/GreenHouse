@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="242.0" prefWidth="387.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <bottom>
+       <FlowPane prefHeight="43.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <Button mnemonicParsing="false" onAction="#powerUpButton" text="Start" />
+         <Label fx:id="label" text="Label">
+            <FlowPane.margin>
+               <Insets left="10.0" />
+            </FlowPane.margin></Label>
+       </FlowPane>
+   </bottom>
+   <center>
+       <FlowPane BorderPane.alignment="CENTER">
+           <VBox>
+               <Circle fx:id="lightCircle" fill="#fdfdfd" layoutX="27.0" layoutY="27.0" radius="32.0" stroke="BLACK" strokeType="INSIDE">
+                   <VBox.margin>
+                       <Insets left="10.0" top="10.0" />
+                   </VBox.margin>
+               </Circle>
+               <Label text="Свет">
+                   <VBox.margin>
+                       <Insets left="28.0" top="10.0" />
+                   </VBox.margin>
+               </Label>
+           </VBox>
+           <VBox layoutX="10.0" layoutY="10.0">
+               <Circle fx:id="waterCircle" fill="WHITE" layoutX="27.0" layoutY="27.0" radius="32.0" stroke="BLACK" strokeType="INSIDE">
+                   <VBox.margin>
+                       <Insets left="25.0" top="10.0" />
+                   </VBox.margin>
+               </Circle>
+               <Label text="Вода">
+                   <VBox.margin>
+                       <Insets left="40.0" top="10.0" />
+                   </VBox.margin>
+               </Label>
+           </VBox>
+           <VBox layoutX="84.0" layoutY="10.0">
+               <Circle fx:id="thermCircle" fill="WHITE" layoutX="27.0" layoutY="27.0" radius="32.0" stroke="BLACK" strokeType="INSIDE">
+                   <VBox.margin>
+                       <Insets left="25.0" top="10.0" />
+                   </VBox.margin>
+               </Circle>
+               <Label text="Термостат">
+                   <VBox.margin>
+                       <Insets left="25.0" top="10.0" />
+                   </VBox.margin>
+               </Label>
+           </VBox>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+       </FlowPane>
+   </center>
+</BorderPane>
