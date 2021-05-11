@@ -27,12 +27,6 @@ public class GreenhouseController {
         if (e.ready()) {
           System.out.println(e);
           Platform.runLater(() -> {
-            if (e instanceof GreenhouseControls.LightOn) controller.lightCircle.setFill(Color.YELLOW);
-            if (e instanceof GreenhouseControls.LightOff) controller.lightCircle.setFill(Color.WHITE);
-            if (e instanceof GreenhouseControls.WaterOn) controller.waterCircle.setFill(Color.BLUE);
-            if (e instanceof GreenhouseControls.WaterOff) controller.waterCircle.setFill(Color.WHITE);
-            if (e instanceof GreenhouseControls.ThermostatDay) controller.thermCircle.setFill(Color.YELLOW);
-            if (e instanceof GreenhouseControls.ThermostatNight) controller.thermCircle.setFill(Color.BLACK);
             controller.label.setText(e.toString());
           });
           e.action();
