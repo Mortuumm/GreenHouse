@@ -34,6 +34,7 @@ title __GREENHOUSE's Class Diagram__\n
 
   model.GreenhouseController o-- sample.Controller : controller
   model.GreenhouseControls -up-|> model.GreenhouseController
+  model.GreenhouseControls o-- sample.Controller : controller
   sample.Main -up-|> javafx.application.Application
 
 

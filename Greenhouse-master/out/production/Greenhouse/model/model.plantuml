@@ -119,6 +119,7 @@ title __MODEL's Class Diagram__\n
 
   model.GreenhouseController o-- sample.Controller : controller
   model.GreenhouseControls -up-|> model.GreenhouseController
+  model.GreenhouseControls o-- sample.Controller : controller
   model.GreenhouseControls +-down- model.GreenhouseControls.Bell
   model.GreenhouseControls +-down- model.GreenhouseControls.LightOff
   model.GreenhouseControls +-down- model.GreenhouseControls.LightOn

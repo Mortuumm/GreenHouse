@@ -6,16 +6,11 @@ package model;
 // classes allow you to encapsulate different
 // functionality for each type of event.
 
-import javafx.scene.paint.Color;
-import sample.Controller;
-
 public class GreenhouseControls extends GreenhouseController {
   private boolean light = false;
-private Controller controller;
 
   public GreenhouseControls(sample.Controller controller) {
     super(controller);
-    this.controller = controller;
   }
 
   public class LightOn extends Event {
@@ -23,7 +18,7 @@ private Controller controller;
     public void action() {
       // Put hardware control code here to
       // physically turn on the light.
-      controller.lightCircle.setFill(Color.YELLOW);
+     // controller.lightCircle.setFill(Color.YELLOW);
       light = true;
     }
     public String toString() { return "Light is on"; }
@@ -33,7 +28,7 @@ private Controller controller;
     public void action() {
       // Put hardware control code here to
       // physically turn off the light.
-      controller.lightCircle.setFill(Color.WHITE);
+      //controller.lightCircle.setFill(Color.WHITE);
       light = false;
     }
     public String toString() { return "Light is off"; }
@@ -44,7 +39,7 @@ private Controller controller;
     public void action() {
       // Put hardware control code here.
       water = true;
-      controller.waterCircle.setFill(Color.BLUE);
+     // controller.waterCircle.setFill(Color.BLUE);
     }
     public String toString() {
       return "Water is on";
@@ -55,7 +50,7 @@ private Controller controller;
     public void action() {
       // Put hardware control code here.
       water = false;
-      controller.waterCircle.setFill(Color.WHITE);
+     // controller.waterCircle.setFill(Color.WHITE);
     }
     public String toString() {
       return "Water is off";
@@ -69,7 +64,7 @@ private Controller controller;
     public void action() {
       // Put hardware control code here.
       thermostat = "Night";
-      controller.thermCircle.setFill(Color.BLACK);
+     // controller.thermCircle.setFill(Color.BLACK);
     }
     public String toString() {
       return "Thermostat on night setting";
@@ -82,7 +77,7 @@ private Controller controller;
     public void action() {
       // Put hardware control code here.
       thermostat = "Day";
-      controller.thermCircle.setFill(Color.YELLOW);
+     // controller.thermCircle.setFill(Color.YELLOW);
     }
     public String toString() {
       return "Thermostat on day setting";
