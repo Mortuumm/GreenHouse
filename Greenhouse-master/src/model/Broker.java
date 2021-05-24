@@ -27,6 +27,9 @@ public class Broker {
 
     public void checkEvent(Event e) {
        controller.label.setText(e.toString());
+        //Почему не использовать Map как неповторяющеся множество ключ\значение и по одному ключу получить Control (элемент управления), а по другому во втором множестве - цвет
+        circlesHashMap.get(e.toString()).setColor(eventColorHashMap.get(e.getClass()));
+        //с какой цель перебирать элементы map???
        for(Map.Entry<Class<?>, Color> entryEvent : eventColorHashMap.entrySet()) {
            if (entryEvent.getKey() == e.getClass()) {
                 for(Map.Entry<String, Circle> entryCircles : circlesHashMap.entrySet()) { if (e.toString().startsWith(entryCircles.getKey())) {
